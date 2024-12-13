@@ -22,6 +22,16 @@ class _HomePageState extends State<HomePage> {
   List<DietModel> diets = [];
   List<PopularDietsModel> popularDiets = [];
 
+  void selectPopularDiet(index){
+    setState(() {
+      if(popularDiets[index].boxIsSelected){
+        popularDiets[index].boxIsSelected = false;
+      }else{
+        popularDiets[index].boxIsSelected = true;
+      }
+    });
+  }
+
   void getInitialInfo() {
     categories = CategoryModel.getCategories();
     diets = DietModel.getDiets();
@@ -35,7 +45,6 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    getInitialInfo();
     return Scaffold(
       appBar: appBar(),
       body: ListView(
@@ -131,7 +140,7 @@ class _HomePageState extends State<HomePage> {
                         ],
                       ),
                       GestureDetector(
-                        onTap: () {},
+                        onTap: () => selectPopularDiet(index),
                         child: SvgPicture.asset(
                           "assets/icons/button.svg",
                           width: 30,
