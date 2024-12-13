@@ -43,3 +43,65 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Flutter/Dart specific
+.dart_tool/
+.svn/
+.packages
+.pub-cache/
+.pub/
+build/
+*.lock
+
+# Generated files
+.flutter-plugins
+.flutter-plugins-dependencies
+.flutter-versions
+
+# Platform-specific
+android/local.properties
+ios/Flutter/Generated.xcconfig
+ios/Pods/
+windows/flutter/ephemeral/
+macos/flutter/ephemeral/
+linux/flutter/ephemeral/
+*.iml
+
+# IDE-specific
+.idea/
+*.ipr
+*.iws
+.vscode/
+.vscode/settings.json
+.vscode/launch.json
+.vscode/tasks.json
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# Dependency cache
+~/.pub-cache/
+node_modules/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+*~
+
+# Firebase/Crashlytics
+crashlytics/
+firebase-debug.log
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+
+# Codemagic
+codemagic.yaml
+
+# Docker
+docker-compose.override.yml
+.env
+
